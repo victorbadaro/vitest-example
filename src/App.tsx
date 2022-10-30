@@ -7,7 +7,10 @@ export function App() {
 	function handleSubmit(event: FormEvent) {
 		event.preventDefault();
 
-		console.log({ name, email });
+		if(name === 'example1')
+			console.log('this is the first example');
+		else
+			console.log({ name, email });
 	}
 
 	return (
