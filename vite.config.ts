@@ -7,6 +7,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [react()],
 	test: {
-		globals: true
+		globals: true,
+		environment: 'jsdom'
 	}
 });
