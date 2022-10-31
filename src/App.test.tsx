@@ -21,7 +21,7 @@ describe('<App />', () => {
 	});
 
 	it('Should call console.log function passing a string after submitting the form', async () => {
-		const spy = vitest.spyOn(console, 'log').mockImplementation(() => {}); // eslint-disable-line
+		const spy = vitest.spyOn(console, 'log').mockImplementation(() => {});
 		const { container } = render(<App />);
 		const form = container.querySelector('form') as HTMLFormElement;
 		const nameInput = form.querySelector('input[name=name]') as HTMLInputElement;
@@ -36,7 +36,7 @@ describe('<App />', () => {
 	});
 
 	it('Should call console.log function passing an object after submitting the form', async () => {
-		const spy = vitest.spyOn(console, 'log').mockImplementation(() => {}); // eslint-disable-line
+		const spy = vitest.spyOn(console, 'log').mockImplementation(() => {});
 		const { container } = render(<App />);
 		const form = container.querySelector('form') as HTMLFormElement;
 		const nameInput = form.querySelector('input[name=name]') as HTMLInputElement;
@@ -54,7 +54,7 @@ describe('<App />', () => {
 	});
 
 	it("Should call console.log function passing It's São Paulo string", async () => {
-		const spy = vitest.spyOn(console, 'log').mockImplementation(() => {}); // eslint-disable-line
+		const spy = vitest.spyOn(console, 'log').mockImplementation(() => {});
 		const { container } = render(<App />);
 		const form = container.querySelector('form') as HTMLFormElement;
 		const nameInput = form.querySelector('input[name=name]') as HTMLInputElement;
@@ -77,7 +77,7 @@ describe('<App />', () => {
 			json: () => Promise.resolve({ cep: '11111-111', uf: 'MG' })
 		}));
 
-		const spy = vitest.spyOn(console, 'log').mockImplementation(() => {}); // eslint-disable-line
+		const spy = vitest.spyOn(console, 'log').mockImplementation(() => {});
 		const { container } = render(<App />);
 		const form = container.querySelector('form') as HTMLFormElement;
 		const nameInput = form.querySelector('input[name=name]') as HTMLInputElement;
